@@ -15,9 +15,9 @@ namespace guessthenumber
             Random random = new Random();
             int guess = 0;
             int attempts = 1;
-            ShowRandomNumbers(random, guess, attempts);
+            RandomCode(random, guess, attempts);
         }
-        private static void ShowRandomNumbers(Random random, int guess, int attempts)
+        private static void RandomCode(Random random, int guess, int attempts)
         {
             int num = random.Next(1, 100);
 
