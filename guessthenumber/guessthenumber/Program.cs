@@ -9,16 +9,19 @@ namespace guessthenumber
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             
             Random random = new Random();
+            int guess = 0;
+            int attempts = 1;
+            ShowRandomNumbers(random, guess, attempts,);
+        }
+        private static void ShowRandomNumbers(Random random, int guess, int attempts)
+        {
             int num = random.Next(1, 100);
 
-            int guess;
-            int attempts = 0;
-
-            outer:
+        outer:
 
             Console.WriteLine("choose a number between 1 and 100");
 
@@ -42,7 +45,7 @@ namespace guessthenumber
             }
             Console.WriteLine("you guessed the number it took you " + attempts + " attempts");
             return;
-            
-        }
+            }
+        
     }
 }
